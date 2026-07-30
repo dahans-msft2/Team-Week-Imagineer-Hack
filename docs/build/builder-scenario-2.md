@@ -3,7 +3,7 @@ title: 🔵 Builder · Agent-Orchestrated — Scenario 2
 ---
 
 # 🔵 Builder · Agent-Orchestrated
-## Scenario 2 — The Screening Room
+## Scenario 2 — The Critic
 
 **Building with:** Copilot Studio
 
@@ -24,7 +24,7 @@ Steps 1–4 give you a rough reviewer in about 35 minutes. Everything after that
 ### Step 1 — Install the skill and see the data
 📘 [Create an agent + solution](/bricks/studio-create-agent)
 
-**Goal:** the **`screening-room`** skill is installed, and your agent can access all five articles, the example audience cards, and the style guide from the **`data-pack`** folder.
+**Goal:** the **`the-critic`** skill is installed, and your agent can access all five articles, the example audience cards, and the style guide from the **`data-pack`** folder.
 
 ### Step 2 — See what the provided reviewer says
 *~5 minutes*
@@ -47,7 +47,7 @@ Steps 1–4 give you a rough reviewer in about 35 minutes. Everything after that
 
 **Goal:** an audience card describing a real audience you write for — grounded in real org data where possible, corrected by you where it isn't.
 
-> *Stuck?* → **"Using the screening-room skill, interview me about my audience — use Work IQ to answer whatever you can before asking me."**
+> *Stuck?* → **"Using the the-critic skill, interview me about my audience — use Work IQ to answer whatever you can before asking me."**
 
 ### Step 4 — Get a rough reviewer working
 📘 [Ground on a knowledge source](/bricks/studio-knowledge-grounding)
@@ -60,7 +60,7 @@ Steps 1–4 give you a rough reviewer in about 35 minutes. Everything after that
 | Training unit | SHIP | SHIP | — |
 | Executive summary | REVISE | **REJECT** | *"quote from the content"* |
 
-> **You never change the `screening-room` skill.** It's the "before" you're measuring against. Everything you build goes in `my-reviewer`.
+> **You never change the `the-critic` skill.** It's the "before" you're measuring against. Everything you build goes in `my-reviewer`.
 
 **Test early.** Score ONE article. Did it use all five checks? If it skipped a check, move that check higher in the instructions.
 
@@ -136,14 +136,14 @@ Around halfway the room stops for a **team checkpoint**, and at ~55 minutes a **
 
 > *Stuck?* → **"Build a second agent that takes my-reviewer's scorecard and writes a message to the author — what scored low, why, and what to fix — in a tone a peer would accept."**
 
-### Step 11 — Add a critic agent that argues with the reviewer
+### Step 11 — Add a challenger agent that argues with the reviewer
 📘 [Build two agents that hand off](/bricks/studio-multi-agent)
 
-**Goal:** a **critic agent** between the reviewer and communicator. It demands a source for every score and argues the opposite verdict. Nothing reaches the author until it has survived that.
+**Goal:** a **challenger agent** between the reviewer and communicator. It demands a source for every score and argues the opposite verdict. Nothing reaches the author until it has survived that.
 
 Content → **reviewer** → **critic** → communicator.
 
-The critic does two jobs on every score:
+The challenger does two jobs on every score:
 
 | | |
 |---|---|
@@ -151,7 +151,7 @@ The critic does two jobs on every score:
 | **Argues the opposite** | Makes the strongest case against the score. Where that case wins, the score moves. |
 
 ::: warning Instruction drift
-An agent asked to challenge its own output tends to agree with itself. A critic that only ever sees the scorecard has no attachment to it. This is what Copilot Studio makes easy that the other altitudes have to work for.
+An agent asked to challenge its own output tends to agree with itself. A challenger that only ever sees the scorecard has no attachment to it. This is what Copilot Studio makes easy that the other altitudes have to work for.
 :::
 
 ::: info Why this matters
@@ -187,7 +187,7 @@ Madaan et al. (2023) showed that self-critique improves quality — but only whe
 
 | Folder | What's in it |
 |---|---|
-| `screening-room/` | The skill. Install this first. |
+| `the-critic/` | The skill. Install this first. |
 | `data-pack/content/` | The five articles |
 | `data-pack/audience-cards/` | Four example audience cards |
 | `data-pack/style-guide/` | The house style rules |
@@ -197,10 +197,10 @@ Madaan et al. (2023) showed that self-critique improves quality — but only whe
 - [ ] Your audience card, and the one line on it that changed the most about how you review
 - [ ] Where the card came from — the parts Work IQ found, and the parts you corrected
 - [ ] Your two checks, and one you cut during NARROW and why
-- [ ] A citation the critic agent forced out that the provided reviewer never produced
+- [ ] A citation the challenger agent forced out that the provided reviewer never produced
 - [ ] A score that moved when the critic argued against itself
 - [ ] **The twist** — what happened when you ran on another team's audience card
-- [ ] The reviewer → critic → communicator chain running end to end
+- [ ] The reviewer → challenger → communicator chain running end to end
 - [ ] The Adaptive Card in Teams with Approve and Send back buttons
 - [ ] The routed decision — pressing Send back delivers the note to the author
 - [ ] Someone else using the published agent on a piece you haven't seen

@@ -13,7 +13,7 @@ You write real code. You get the contract and the harness — not the solution.
 | Scenario | Go here |
 | --- | --- |
 | **🧬 Scenario 1 · The Digital Twin** | **[Start building →](/build/advanced-scenario-1)** |
-| **🎬 Scenario 2 · The Screening Room** | **[Start building →](/build/advanced-scenario-2)** |
+| **🎬 Scenario 2 · The Critic** | **[Start building →](/build/advanced-scenario-2)** |
 | Scenario 3 | Coming soon |
 
 ::: tip Grab the starter repo first

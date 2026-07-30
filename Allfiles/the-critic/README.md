@@ -1,4 +1,4 @@
-# The Screening Room
+# The Critic
 ## Content Health — the audience lens
 
 **One skill. Five modes. Build a reviewer that knows who the content is for.**
@@ -48,7 +48,7 @@ That's it. The skill takes it from there. If you're ever unsure, ask **"what do 
 
 | Path | Action |
 |---|---|
-| 🟢 **Base** — Cowork | Drop the `screening-room` folder into your skills. One skill, not five. |
+| 🟢 **Base** — Cowork | Drop the `the-critic` folder into your skills. One skill, not five. |
 | 🔵 **Builder** — Copilot Studio | `SKILL.md` and `YOUR-LENS.md` become instructions; the `reference/` files and the data pack become knowledge sources |
 | 🟣 **Advanced** — Scout · VS Code | Drop the folder in your workspace. Scout picks it up as a skill; or load the files from your own code. |
 

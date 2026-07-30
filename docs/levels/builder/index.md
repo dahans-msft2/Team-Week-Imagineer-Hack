@@ -6,6 +6,14 @@ title: Builder · Agent-Orchestrated
 
 **Build with:** Copilot Studio.
 
+## Pick your scenario
+
+| Scenario | Go here |
+| --- | --- |
+| Scenario 1 | Coming soon |
+| **🎬 Scenario 2 · The Critic** | **[Start building →](/build/builder-scenario-2)** |
+| Scenario 3 | Coming soon |
+
 ## What you'll demonstrate (the spine)
 
 - [ ] Two agents that hand off (a classifier + a responder)
@@ -22,5 +30,3 @@ title: Builder · Agent-Orchestrated
 - [Add an agent flow](/bricks/studio-agent-flow)
 - [Send an Adaptive Card to Teams](/bricks/studio-adaptive-card)
 - [Publish your agent](/bricks/studio-publish)
-
-> **TODO** — add the assembly map once scenarios are locked.

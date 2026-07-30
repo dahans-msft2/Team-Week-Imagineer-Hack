@@ -3,7 +3,7 @@ title: 🟢 Base · Copilot-Crafted — Scenario 2
 ---
 
 # 🟢 Base · Copilot-Crafted
-## Scenario 2 — The Screening Room
+## Scenario 2 — The Critic
 
 **Building with:** Microsoft 365 Copilot + Cowork
 
@@ -24,7 +24,7 @@ Steps 1–4 give you a rough reviewer in about 35 minutes. Everything after that
 ### Step 1 — Get the files into Cowork
 📘 [Connect Cowork to a data source](/bricks/cowork-connect-source)
 
-**Goal:** the **`screening-room`** skill is installed, and Cowork can read all five articles, the example audience cards, and the style guide from the **`data-pack`** folder.
+**Goal:** the **`the-critic`** skill is installed, and Cowork can read all five articles, the example audience cards, and the style guide from the **`data-pack`** folder.
 
 ### Step 2 — See what the provided reviewer says
 *~5 minutes*
@@ -51,7 +51,7 @@ Zheng et al. (2023) documented that models acting as judges carry consistent bia
 
 **Goal:** an audience card describing a real audience you write for — grounded in real org data where possible, corrected by you where it isn't.
 
-> *Stuck?* → **"Using the screening-room skill, interview me about my audience — use Work IQ to answer whatever you can before asking me."**
+> *Stuck?* → **"Using the the-critic skill, interview me about my audience — use Work IQ to answer whatever you can before asking me."**
 
 ### Step 4 — Get a rough reviewer working
 📘 [Write a reusable Cowork skill](/bricks/cowork-build-skill) · 📘 [Produce a formatted output](/bricks/cowork-formatted-output)
@@ -64,7 +64,7 @@ Zheng et al. (2023) documented that models acting as judges carry consistent bia
 | Training unit | SHIP | SHIP | — |
 | Executive summary | REVISE | **REJECT** | *"quote from the content"* |
 
-> **You never change the `screening-room` skill.** It's the "before" you're measuring against. Everything you build goes in `my-reviewer`.
+> **You never change the `the-critic` skill.** It's the "before" you're measuring against. Everything you build goes in `my-reviewer`.
 
 **Done when:** at least one verdict differs.
 
@@ -161,7 +161,7 @@ Route the digest to a chat or channel you created for this exercise — not a li
 
 | Folder | What's in it |
 |---|---|
-| `screening-room/` | The skill. Install this first. |
+| `the-critic/` | The skill. Install this first. |
 | `data-pack/content/` | The five articles |
 | `data-pack/audience-cards/` | Four example audience cards |
 | `data-pack/style-guide/` | The house style rules |

@@ -1,9 +1,9 @@
 ---
-name: "screening-room"
-description: "Content Health audience-lens evaluator for the Screening Room hack. Interviews you to build an audience card, evaluates content against a baseline eval and against your own audience lens, diffs the two, and produces adaptation briefs saying what would have to change for a specific reader — including whether the format itself is wrong. Use when the user says screening room, mentions the audience lens, asks to build or extend a content eval, wants content scored for a specific audience or persona, asks what to do next in the hack, or asks whether content lands for a particular reader."
+name: "the-critic"
+description: "Content Health audience-lens evaluator for The Critic hack. Interviews you to build an audience card, evaluates content against a baseline eval and against your own audience lens, diffs the two, and produces adaptation briefs saying what would have to change for a specific reader — including whether the format itself is wrong. Use when the user says the critic, mentions the audience lens, asks to build or extend a content eval, wants content scored for a specific audience or persona, asks what to do next in the hack, or asks whether content lands for a particular reader."
 ---
 
-# The Screening Room
+# The Critic
 
 The baseline eval knows whether content is good. **It has no idea who it's for.** This skill helps the user teach it — and keep teaching it.
 

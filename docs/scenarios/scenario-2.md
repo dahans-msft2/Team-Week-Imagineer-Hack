@@ -1,8 +1,8 @@
 ---
-title: Scenario 2 · The Screening Room
+title: Scenario 2 · The Critic
 ---
 
-# Scenario 2 — The Screening Room
+# Scenario 2 — The Critic
 
 ## The problem (villain's complaint)
 
@@ -18,11 +18,11 @@ Everything ships in the kit.
 
 | Folder | What's in it |
 |---|---|
-| `screening-room/` | The provided skill. Interviews you, runs the provided reviewer, compares results. |
+| `the-critic/` | The provided skill. Interviews you, runs the provided reviewer, compares results. |
 | `data-pack/content/` | Five articles (learn unit, how-to, blog post, exec summary, setup guide), all about the same capability, each declaring who it was written for |
 | `data-pack/audience-cards/` | Four worked audience cards — Contoso Retail, Financial, Health, Manufacturing |
 | `data-pack/style-guide/` | The house style rules |
-| `screening-room-starter/` | 🟣 Advanced only — two working deterministic checks, plus room for yours |
+| `the-critic-starter/` | 🟣 Advanced only — two working deterministic checks, plus room for yours |
 
 **Your job:** build a second reviewer that knows a real audience *you* pick. Run both. Show where they disagree, and why you're right.
 

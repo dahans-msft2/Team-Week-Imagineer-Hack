@@ -13,7 +13,7 @@ No code. Fully guided, step by step.
 | Scenario | Go here |
 | --- | --- |
 | **🧬 Scenario 1 · The Digital Twin** | **[Start building →](/build/base-scenario-1)** |
-| **🎬 Scenario 2 · The Screening Room** | **[Start building →](/build/base-scenario-2)** |
+| **🎬 Scenario 2 · The Critic** | **[Start building →](/build/base-scenario-2)** |
 | Scenario 3 | Coming soon |
 
 ::: tip Start with Twin Forge

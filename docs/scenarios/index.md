@@ -11,5 +11,5 @@ Scenario 3 is still being finalized with the leadership team and business manage
 :::
 
 - 🔒 [Scenario 1 — The Digital Twin](/scenarios/scenario-1)
-- 🔒 [Scenario 2 — The Screening Room](/scenarios/scenario-2)
+- 🔒 [Scenario 2 — The Critic](/scenarios/scenario-2)
 - [Scenario 3 (TBD)](/scenarios/scenario-3)

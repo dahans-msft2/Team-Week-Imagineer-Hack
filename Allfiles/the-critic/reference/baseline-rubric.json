@@ -1,8 +1,8 @@
 {
   "$schema": "./content-rubric.schema.json",
-  "rubric_id": "screening-room-content-rubric-starter",
+  "rubric_id": "the-critic-content-rubric-starter",
   "version": "0.1-starter",
-  "name": "THE SCREENING ROOM — Content Rubric (starter)",
+  "name": "The Critic — Content Rubric (starter)",
   "what_this_is": "This is the CONTENT RUBRIC. It grades a piece of CONTENT. It is the material participants extend and build their reviewer around — it is not the rubric used to grade the teams. That is the separate Judging Rubric.",
   "note_to_participants": "This rubric is deliberately incomplete. It checks whether content is competent. It does NOT check whether content is right for a specific audience — which is the hard part. Add at least two criteria of your own in 'participant_criteria' below.",
 

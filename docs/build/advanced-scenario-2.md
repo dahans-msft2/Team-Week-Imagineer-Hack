@@ -4,7 +4,7 @@ title: 🟣 Advanced · Code-Extended — Scenario 2
 
 # 🟣 Advanced · Code-Extended
 
-## Scenario 2 — The Screening Room
+## Scenario 2 — The Critic
 
 **Building with:** Scout + GitHub Copilot
 
@@ -25,7 +25,7 @@ Steps 1–4 give you a rough reviewer in about 35 minutes. Everything after that
 ### Step 1 — Set up the repo and get the data in
 📘 [Set up Scout / GitHub Copilot](/bricks/advanced-setup)
 
-**Goal:** a project repo containing the **`screening-room`** skill and the **`data-pack`** folder (five articles, four example audience cards, style guide).
+**Goal:** a project repo containing the **`the-critic`** skill and the **`data-pack`** folder (five articles, four example audience cards, style guide).
 
 ### Step 2 — See what the provided reviewer says
 *~5 minutes*
@@ -50,7 +50,7 @@ Steps 1–4 give you a rough reviewer in about 35 minutes. Everything after that
 
 **Work IQ grounding belongs here — at the start, building the card — not bolted on at the end.**
 
-> *Stuck?* → **"Using the screening-room skill, interview me about my audience — use Work IQ to answer whatever you can before asking me."**
+> *Stuck?* → **"Using the the-critic skill, interview me about my audience — use Work IQ to answer whatever you can before asking me."**
 
 ### Step 4 — Get a rough reviewer working
 *~15 minutes*
@@ -62,7 +62,7 @@ Steps 1–4 give you a rough reviewer in about 35 minutes. Everything after that
 | Training unit | SHIP | SHIP | — |
 | Executive summary | REVISE | **REJECT** | *"quote from the content"* |
 
-> **You never change the `screening-room` skill.** It's the "before" you're measuring against. Everything you build goes in `my-reviewer`.
+> **You never change the `the-critic` skill.** It's the "before" you're measuring against. Everything you build goes in `my-reviewer`.
 
 **Done when:** at least one verdict differs.
 
@@ -137,7 +137,7 @@ Around halfway the room stops for a **team checkpoint**, and at ~55 minutes a **
 
 **Goal:** deterministic code checks alongside the model's judgement — code catches what's countable, the model catches what's contextual.
 
-The kit ships `screening-room-starter/checks.py` with two working examples:
+The kit ships `the-critic-starter/checks.py` with two working examples:
 
 - **`check_reading_time`** — fails content that exceeds the audience card's time budget.
 - **`check_banned_terms`** — flags stop-reading words from the card and style guide.
@@ -189,11 +189,11 @@ This is roughly ten lines of code. Do not build a framework.
 
 | Folder | What's in it |
 |---|---|
-| `screening-room/` | The skill. Install this first. |
+| `the-critic/` | The skill. Install this first. |
 | `data-pack/content/` | The five articles |
 | `data-pack/audience-cards/` | Four example audience cards |
 | `data-pack/style-guide/` | The house style rules |
-| `screening-room-starter/` | Two working deterministic checks (`check_reading_time`, `check_banned_terms`) plus room for yours |
+| `the-critic-starter/` | Two working deterministic checks (`check_reading_time`, `check_banned_terms`) plus room for yours |
 
 ## 5 · Demo checklist
 
