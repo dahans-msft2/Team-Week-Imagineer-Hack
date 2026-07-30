@@ -1,0 +1,153 @@
+{
+  "$schema": "./content-rubric.schema.json",
+  "rubric_id": "screening-room-content-rubric-starter",
+  "version": "0.1-starter",
+  "name": "THE SCREENING ROOM — Content Rubric (starter)",
+  "what_this_is": "This is the CONTENT RUBRIC. It grades a piece of CONTENT. It is the material participants extend and build their reviewer around — it is not the rubric used to grade the teams. That is the separate Judging Rubric.",
+  "note_to_participants": "This rubric is deliberately incomplete. It checks whether content is competent. It does NOT check whether content is right for a specific audience — which is the hard part. Add at least two criteria of your own in 'participant_criteria' below.",
+
+  "scale": {
+    "type": "ordinal",
+    "values": [
+      { "score": 0, "label": "Fail",     "meaning": "Actively wrong or harmful to the reader." },
+      { "score": 1, "label": "Weak",     "meaning": "Present but unreliable. A reviewer would send it back." },
+      { "score": 2, "label": "Adequate", "meaning": "Acceptable. Not memorable, not a problem." },
+      { "score": 3, "label": "Strong",   "meaning": "Does the job well enough to publish as-is." }
+    ],
+    "no_half_points": true,
+    "why": "A 1-10 scale makes an AI reviewer cluster everything at 7-8. Four choices with written anchors forces a real decision."
+  },
+
+  "rules": {
+    "evidence_required": {
+      "rule": "Every score MUST quote the specific text that justifies it. No quote, no score.",
+      "why": "This is the single strongest defense against a reviewer that praises content it did not actually read."
+    },
+    "fatal_criteria": {
+      "rule": "If any criterion marked 'fatal' scores 0, the verdict is REJECT — no matter how high the total.",
+      "why": "Stops '3 + 3 + 3 + 0 = pretty good.' One hallucinated fact is not offset by nice formatting."
+    },
+    "the_plus": {
+      "rule": "Any criterion scoring 0 or 1 MUST come with a specific, actionable fix. Not 'improve clarity' — what to change, where.",
+      "why": "Walt's rule: the note has to make the work better, not just say it's bad. A score with no fix is not a review."
+    },
+    "abstain_allowed": {
+      "rule": "A reviewer may return 'INSUFFICIENT CONTEXT' for a criterion instead of guessing.",
+      "when_to_use": "Use it when a claim cannot be checked from anything you were given. An unverifiable capability, an uncited figure, or a named system that appears nowhere else are all abstention cases, not average scores.",
+      "why": "Slide 9 block 7: bad evals are worse than none. Guessing is how false greens happen."
+    }
+  },
+
+  "starter_criteria": [
+    {
+      "id": "accurate",
+      "name": "Accurate",
+      "question": "Is every factual claim true, current, and verifiable?",
+      "fatal": true,
+      "weight": 3,
+      "anchors": {
+        "0": "Contains a claim that is false, or a product/feature/capability that does not exist.",
+        "1": "Claims are probably true but stated with more confidence than the source supports — including any capability presented as existing that you cannot verify from the content, the style guide, or the audience card.",
+        "2": "Claims are accurate and verifiable; a few could use a citation.",
+        "3": "Every claim is accurate and traceable to something real."
+      },
+      "watch_for": "Confident tone is not evidence. Check the claim, not the delivery. A capability you cannot verify is NOT a 2 — score it 1, or return INSUFFICIENT_CONTEXT. Scoring an unverifiable capability as 'adequate' is the single most common route to a false green."
+    },
+    {
+      "id": "clear",
+      "name": "Clear",
+      "question": "Can the reader follow it on one pass, without re-reading?",
+      "fatal": false,
+      "weight": 2,
+      "anchors": {
+        "0": "Incoherent, or steps are in an order that cannot be followed.",
+        "1": "Requires re-reading. Jargon appears before it is defined.",
+        "2": "Understandable throughout.",
+        "3": "Genuinely easy to follow; complexity is sequenced well."
+      },
+      "watch_for": "Fluent writing that says nothing still fails this."
+    },
+    {
+      "id": "right_level",
+      "name": "Right level",
+      "question": "Does it assume the knowledge this audience actually has — no more, no less?",
+      "fatal": false,
+      "weight": 2,
+      "anchors": {
+        "0": "Unusable for this audience — far too advanced or far too basic.",
+        "1": "Noticeably mispitched; the reader will be lost or bored in places.",
+        "2": "Broadly appropriate.",
+        "3": "Precisely pitched to the audience card."
+      },
+      "watch_for": "Read the audience card before scoring this. It is the most-skipped step in the whole exercise."
+    }
+  ],
+
+  "participant_criteria": {
+    "minimum_required": 2,
+    "instructions": "Add criteria that get at what the starter content rubric cannot see. The starter checks whether content is COMPETENT. Yours should check whether it is RIGHT — for this audience, this intent, this brand.",
+    "must_include": [
+      "a 'question' a human could answer without your content rubric",
+      "written anchors for 0, 1, 2 and 3",
+      "a 'watch_for' naming the trap",
+      "whether it is 'fatal'"
+    ],
+    "prompts_if_stuck": [
+      "Would the intended reader actually be able to DO something after reading this?",
+      "Does it sound like us, or like a generic AI assistant?",
+      "Is anything important missing that this audience would expect to find?",
+      "Does it earn trust — are strong claims supported?",
+      "Would this reader feel talked down to, or shut out?"
+    ],
+    "bad_examples": [
+      "'Quality' — too vague to score.",
+      "'Grammar' — the starter already covers competence, and it will not catch plausible-but-off.",
+      "'Length' — measurable but not meaningful."
+    ],
+    "entries": []
+  },
+
+  "verdict": {
+    "method": "Weighted average of all criteria, then apply gates.",
+    "gates": [
+      "Any fatal criterion at 0 -> REJECT.",
+      "Two or more criteria at 1 or below -> REVISE (minimum).",
+      "Any criterion returned as INSUFFICIENT CONTEXT -> cannot be SHIP; escalate to human."
+    ],
+    "thresholds": {
+      "SHIP": "Weighted average >= 2.5 and no gate triggered.",
+      "REVISE": "Weighted average >= 1.5, or any gate short of reject.",
+      "REJECT": "Weighted average < 1.5, or a fatal gate triggered."
+    }
+  },
+
+  "output_contract": {
+    "why": "All three build levels must emit this same shape. That is what makes one Judging Rubric work across every submission, whether it was built in Cowork or VS Code.",
+    "required_fields": {
+      "content_id": "which piece was reviewed",
+      "audience": "which audience card was applied",
+      "verdict": "SHIP | REVISE | REJECT",
+      "overall_score": "weighted average, one decimal",
+      "criteria": [
+        {
+          "id": "criterion id",
+          "score": "0-3 or INSUFFICIENT_CONTEXT",
+          "evidence": "direct quote from the content",
+          "fix": "required when score <= 1; specific and actionable"
+        }
+      ],
+      "top_fixes": "the three highest-value changes, ranked"
+    }
+  },
+
+  "self_check": {
+    "why": "Ask your reviewer these before you submit. Slide 9 block 7: a bad eval is worse than none.",
+    "questions": [
+      "Run the same piece twice. Do you get the same verdict? If not, your criteria are too vague.",
+      "Did it SHIP anything that a careful human would send back? That is a false green — the worst failure mode.",
+      "Did it REJECT anything genuinely good? That is a false red — it creates rework and people stop trusting it.",
+      "Does every score quote real text from the content?",
+      "Could a person who is not a content expert read your output and act on it? (Slide 9, block 4 — this is the actual bar.)"
+    ]
+  }
+}

@@ -63,6 +63,7 @@ export default defineConfig({
             { text: "Write a reusable Cowork skill", link: "/bricks/cowork-build-skill" },
             { text: "Produce a formatted output", link: "/bricks/cowork-formatted-output" },
             { text: "Re-run a skill on new inputs", link: "/bricks/cowork-rerun-skill" },
+            { text: "Schedule a Cowork skill to run unattended", link: "/bricks/cowork-scheduled-run" },
           ],
         },
         {
@@ -84,6 +85,7 @@ export default defineConfig({
             { text: "Build a custom connector (MCP)", link: "/bricks/advanced-mcp-connector" },
             { text: "Ground on live data with Work IQ", link: "/bricks/advanced-work-iq" },
             { text: "Add a guardrail / output check", link: "/bricks/advanced-guardrail" },
+            { text: "Build a real audience profile with Work IQ", link: "/bricks/workiq-audience-lookup" },
           ],
         },
       ],
@@ -93,7 +95,7 @@ export default defineConfig({
           items: [
             { text: "Overview", link: "/scenarios/" },
             { text: "Scenario 1 · The Digital Twin", link: "/scenarios/scenario-1" },
-            { text: "Scenario 2 (TBD)", link: "/scenarios/scenario-2" },
+            { text: "Scenario 2 · The Screening Room", link: "/scenarios/scenario-2" },
             { text: "Scenario 3 (TBD)", link: "/scenarios/scenario-3" },
           ],
         },

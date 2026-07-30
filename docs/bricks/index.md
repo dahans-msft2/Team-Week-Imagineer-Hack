@@ -14,6 +14,7 @@ Building blocks are short, reusable **how-to guides** — each covers one functi
 - [Write a reusable Cowork skill](/bricks/cowork-build-skill)
 - [Produce a formatted output](/bricks/cowork-formatted-output)
 - [Re-run a skill on new inputs](/bricks/cowork-rerun-skill)
+- [Schedule a Cowork skill to run unattended](/bricks/cowork-scheduled-run)
 
 ## 🔵 Builder · Copilot Studio
 
@@ -31,3 +32,7 @@ Building blocks are short, reusable **how-to guides** — each covers one functi
 - [Build a custom connector (MCP)](/bricks/advanced-mcp-connector)
 - [Ground on live data with Work IQ](/bricks/advanced-work-iq)
 - [Add a guardrail / output check](/bricks/advanced-guardrail)
+
+## 🔗 Any altitude
+
+- [Build a real audience profile with Work IQ](/bricks/workiq-audience-lookup)
